@@ -28,6 +28,10 @@
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
+    transition: 0.4321s;
+    color: lightblue;
+    font-weight: 900;
+    font-size: 100px;
 }
 
 .slide1 {
@@ -42,6 +46,10 @@
     background: url(/assets/3.jpg);
 }
 
+.slideShow:hover .slide1{
+    transform: translateX(50%);
+}
+
 .active{
-    transform: translateX(0%)
+    transform: translateX(50%)
 }

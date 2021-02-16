@@ -6,6 +6,20 @@ import { Provider } from './context';
 
 const App = () => {
     const initialState = {
+        // slides: [
+        //     {
+        //         name: "1",
+        //         active: true
+        //     }
+        //     {
+        //         name: "2",
+        //         active: false
+        //     }
+        //     {
+        //         name: "3",
+        //         active: false
+        //     }
+        // ]
     };
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -15,9 +29,14 @@ const App = () => {
                 <header className={style.header}></header>
                 <div className={style.slideshowWrapper}>
                     <div className={style.slideShow}>
-                        <div className={`${style.slide} ${style.slide1} ${style.active}`}>One</div>
+                        {/* {state.slides.map() => {}} */}
+                        <div className={`${style.slide} ${style.slide1}`}>One</div>
                         <div className={`${style.slide} ${style.slide2}`}>Two</div>
                         <div className={`${style.slide} ${style.slide3}`}>Three</div>
+                    </div>
+                    <div className={style.buttons}>
+                        <button className={style.leftButton}><i class="fa fa-caret-square-left"></i></button>
+                        <button className={style.rightButton}><i class="fa fa-caret-square-right"></i></button>
                     </div>
                 </div>
 
